@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Adivina el número</h1>
+        <p>Piensa en un número entre 1 y 500 y yo trataré de adivinarlo.</p>
+        <button onclick="empezarAdivinanza()" id="empezar">Empezar</button>
+        <div id="adivinanzaContainer" style="display:none;">
+            <p id="adivinanza">¿Tu número es par o impar?</p>
+            <button id="siPar" onclick="responder('par')">Par</button>
+            <button id="noPar" onclick="responder('impar')">Impar</button>
+            <button id="mayor" style="display:none;" onclick="responder('mayor')">Mayor</button>
+            <button id="menor" style="display:none;" onclick="responder('menor')">Menor</button>
+            <button id="correcto" style="display:none;" onclick="responder('correcto')">Correcto</button>
+            <div id="posiblesNumerosContainer">
+                <p id="posiblesNumeros"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"> </script>
+</body>
+
+</html>
